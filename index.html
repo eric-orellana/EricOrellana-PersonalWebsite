@@ -70,14 +70,26 @@
 
         -->
 
-        <!-- Your Image Here -->
-        <img src="images/EricOrellana-Pic.jpg" class="avatar" alt="Image of a handsome hispanic man with long hair, clear glasses, and a breath taking smile.">
+        <!-- Pic and Name -->
+        <div class="profile-container">
+          <div class="top-section">
+            <img src="images/EricOrellana-Pic.jpg" class="avatar" alt="Image of a handsome hispanic man with long hair, clear glasses, and a breath taking smile.">
+            <h1 role="heading" class="header" >Eric Orellana </h1>
+          </div>
+          <p id="bio" class="bio" >Loading bio...</p>
+        </div>
 
-        <!-- Title -->
-        <h1 role="heading">Eric Orellana</h1>
-
-        <!-- Short Bio -->
-        <p>Welcome to my website! More coming soon.</p>
+        <script>
+          fetch('texts/bio.txt')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('bio').innerHTML = data.replace(/\n/g, '<br>'); // Replace newlines with <br>
+              })
+              .catch(error => {
+                  console.error('Error fetching bio:', error);
+                  document.getElementById('bio').textContent = 'Failed to load bio.';
+              });
+        </script>
 
         <!--
 

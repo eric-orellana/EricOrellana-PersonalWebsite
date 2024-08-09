@@ -204,25 +204,60 @@ ol {
   float: left;
 }
 
-/* Misc
+/* Header and Bio
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.profile-container {
+  display: flex;
+  flex-direction: column; /* Stacks the elements vertically */
+  align-items: flex-start; /* Vertically align the items */
+}
+
+.top-section {
+  display: flex;
+  align-items: center; /* Aligns the picture and name vertically */
+}
+
+.avatar {
+  max-width: 23%;
+  height: auto;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 20%;
+  margin-right: 5%; /* Space between the picture and the header */
+}
+
+.header {
+  color:#ffffff;
+  text-align: center;
+  line-height: 100px; /* Vertically center text */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 0%;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden;    /* Hides any overflow text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+}
+
+.bio {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1em;
+  color: #ffffff;
+  width: 100%; /* Ensures the bio takes up the full width of its container */
+}
+
+/* MISC
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #e1e1e1;
-}
-/* Radius values:
-
-10%-40%: Squircles
-50% (default): True circle
-*/
-.avatar {
-  max-width: 60%;
-  height: auto;
-  object-fit: cover;
-  background-position: center;
-  border-radius: 50%;
 }
 
 /* open-sans-regular - vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic */
