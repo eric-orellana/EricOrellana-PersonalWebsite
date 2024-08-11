@@ -219,7 +219,7 @@ ol {
 }
 
 .avatar {
-  max-width: 23%;
+  max-width: 40%;
   height: auto;
   object-fit: cover;
   background-position: center;
