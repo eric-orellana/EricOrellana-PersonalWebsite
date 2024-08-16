@@ -85,16 +85,16 @@
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 
-html {
+body, html {
+  height: 100%; /* Ensure the body and HTML take up the full height */
+  margin: 0; /* Remove default margins */
+  display: flex; /* Use Flexbox for easy centering */
+  justify-content: center; /* Horizontally center the header */
+  align-items: center; /* Vertically center the header */
   font-size: 100%;
   color-scheme: light dark;
-}
-body {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  sans-serif;
 }
 
 /* Typography
@@ -237,12 +237,11 @@ ol {
   background-position: center;
   border-radius: 0%;
   white-space: nowrap; /* Prevents the text from wrapping */
-  overflow: hidden;    /* Hides any overflow text */
   text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
 }
 
 .bio {
-  margin-top: 20px;
+  margin-top: 100px;
   padding: 10px;
   text-align: left;
   line-height: 1.6;
