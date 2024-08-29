@@ -92,7 +92,6 @@ body, html {
   margin: 0; /* Remove default margins */
   display: flex; /* Use Flexbox for easy centering */
   justify-content: center; /* Horizontally center the header */
-  align-items: center; /* Vertically center the header */
   font-size: 100%;
   color-scheme: light dark;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
@@ -239,7 +238,7 @@ ol {
   line-height: 100px; /* Vertically center text */
   max-width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   background-position: center;
   border-radius: 0%;
   white-space: nowrap; /* Prevents the text from wrapping */
@@ -262,7 +261,6 @@ ol {
     padding: 0;
     flex-direction: column;
     align-items: center;
-    margin-top: 150px;
   }
 
   .bio {
@@ -283,7 +281,7 @@ ol {
     font-size: 48px;
     line-height: 96px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     background-position: center;
     border-radius: 0%;
     white-space: nowrap; /* Prevents the text from wrapping */
