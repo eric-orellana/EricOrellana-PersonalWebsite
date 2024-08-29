@@ -207,6 +207,24 @@ ol {
 /* Header and Bio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+@media (max-width: 768px) {
+  .top-section {
+      flex-direction: column; /* Stacks items vertically on smaller screens */
+      align-items: center;
+      margin-top: 20px;
+  }
+
+  .bio {
+    margin-top: 25px;
+    padding: 10px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1em;
+    color: #ffffff;
+    width: 100%; /* Ensures the bio takes up the full width of its container */
+  }
+}
+
 .profile-container {
   display: flex;
   flex-direction: column; /* Stacks the elements vertically */
@@ -241,7 +259,7 @@ ol {
 }
 
 .bio {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 10px;
   text-align: left;
   line-height: 1.6;
