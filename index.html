@@ -95,7 +95,7 @@
   <div class="container">
     <div class="row">
       <div class="column" style="margin-top: 10%">
-        
+
         <!-- Pic and Name -->
         <div class="profile-container">
           <div class="top-section">
@@ -105,11 +105,34 @@
           <p id="bio" class="bio" >Loading bio...</p>
         </div>
 
+        <!-- JavaScript for loading bio -->
         <script>
           fetch('texts/bio.txt')
               .then(response => response.text())
               .then(data => {
                   document.getElementById('bio').innerHTML = data.replace(/\n/g, '<br>'); // Replace newlines with <br>
+              })
+              .catch(error => {
+                  console.error('Error fetching bio:', error);
+                  document.getElementById('bio').textContent = 'Failed to load bio.';
+              });
+        </script>
+
+        <div class="project1-section" style="margin-top: 50px;">
+          <div class="project1-container">
+              <img src="images/websnap.jpg" class="project1-image" alt="Image of this website">
+              <div class="project1-description">
+                  <h2>This Website</h2>
+                  <p id="WebBio">Loading WebBio...</p>
+              </div>
+          </div>
+        </div>
+
+        <script>
+          fetch('texts/webBio.txt')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('WebBio').innerHTML = data.replace(/\n/g, '<br>'); // Replace newlines with <br>
               })
               .catch(error => {
                   console.error('Error fetching bio:', error);

@@ -39,6 +39,7 @@
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+  height: auto;
 }
 .container-left {
   position: relative;
@@ -68,6 +69,7 @@
 @media (min-width: 768px) {
   .container {
     width: 80%;
+    height: auto;
   }
   .column,
   .columns {
@@ -207,20 +209,25 @@ ol {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .profile-container {
+  width: auto;
+  padding: 0;
   display: flex;
   flex-direction: column; /* Stacks the elements vertically */
   align-items: flex-start; /* Vertically align the items */
+  overflow: visible;
 }
 
 .top-section {
+  width: 100%;
+  padding: 0;
   display: flex;
-  align-items: center; /* Aligns the picture and name vertically */
+  align-items: flex-start; /* Aligns the picture and name vertically */
 }
 
 .avatar {
   max-width: 40%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   background-position: center;
   border-radius: 20%;
   margin-right: 5%; /* Space between the picture and the header */
@@ -251,9 +258,11 @@ ol {
 
 @media (max-width: 768px) {
   .top-section {
+    width: 100%;
+    padding: 0;
     flex-direction: column;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 50px;
   }
 
   .bio {
@@ -284,7 +293,40 @@ ol {
 /* First Project
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.project1-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 50px;
+}
 
+.project1-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.project1-description {
+  width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .project1-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .project1-image {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .project1-description {
+      width: 100%;
+  }
+}
 
 /* MISC
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
