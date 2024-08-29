@@ -57,15 +57,15 @@
 }
 
 /* For devices larger than 400px */
-@media (min-width: 400px) {
+/* @media (min-width: 400px) {
   .container {
     width: 85%;
     padding: 0;
   }
-}
+} */
 
 /* For devices larger than 550px */
-@media (min-width: 550px) {
+@media (min-width: 768px) {
   .container {
     width: 80%;
   }
@@ -110,8 +110,7 @@ h1 {
   letter-spacing: 0;
 }
 
-/* Larger than phablet */
-@media (min-width: 550px) {
+@media (min-width: 768px) {
   h1 {
     font-size: 48px;
     line-height: 96px;
@@ -207,24 +206,6 @@ ol {
 /* Header and Bio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-@media (max-width: 768px) {
-  .top-section {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-  }
-
-  .bio {
-    margin-top: 0px;
-    padding: 10px;
-    text-align: left;
-    line-height: 1.6;
-    font-size: 1em;
-    color: #ffffff;
-    width: 100%; /* Ensures the bio takes up the full width of its container */
-  }
-}
-
 .profile-container {
   display: flex;
   flex-direction: column; /* Stacks the elements vertically */
@@ -266,6 +247,39 @@ ol {
   font-size: 1em;
   color: #ffffff;
   width: 100%; /* Ensures the bio takes up the full width of its container */
+}
+
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+  }
+
+  .bio {
+    margin-top: 0px;
+    padding: 10px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1em;
+    color: #ffffff;
+    width: 100%; /* Ensures the bio takes up the full width of its container */
+  }
+
+  .header {
+    color:#ffffff;
+    text-align: center;
+    line-height: 100px; /* Vertically center text */
+    max-width: 100%;
+    font-size: 48px;
+    line-height: 96px;
+    height: auto;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 0%;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+  }
 }
 
 /* MISC
