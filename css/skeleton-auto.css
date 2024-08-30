@@ -233,7 +233,6 @@ ol {
 }
 
 .header {
-  color:#ffffff;
   text-align: center;
   line-height: 100px; /* Vertically center text */
   max-width: 100%;
@@ -251,7 +250,6 @@ ol {
   text-align: left;
   line-height: 1.6;
   font-size: 1em;
-  color: #ffffff;
   width: 100%; /* Ensures the bio takes up the full width of its container */
 }
 

@@ -1,5 +1,5 @@
 I made this website using an open source repo called LittleLink, chatGPT, and a web hosting service call Netlify. It was fairly straight forward setting the site up. This is connected to my GitHub Repo, any pushes I make are automatically uploaded to my website. 
 
-Once connected, I started experimenting with the css and HTML and quickly realized the amount of choices I have to make. A lot goes into websites. The design, build, texts, etc. ChatGPT was useful - to a point. I eventually had to debug in Chrome using inpect mode. 
+Once connected, I started experimenting with the CSS and HTML and quickly realized the amount of choices I have to make. A lot goes into websites. The design, build, texts, etc. ChatGPT was useful - to a point. I eventually had to debug in Chrome using inpect mode. 
 
-I have had some exposure to frontend development but never really owned any large scale project. This website will continue to evolve as I add more styling and content. 
+I have had some exposure to frontend development but never really owned any large scale project. I enjoyed making this site. Its really satisfying to see it evolve.
