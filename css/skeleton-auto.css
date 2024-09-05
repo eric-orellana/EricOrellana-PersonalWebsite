@@ -89,6 +89,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 
 body, html {
   height: 100%; /* Ensure the body and HTML take up the full height */
+  width: 100%;
   margin: 0; /* Remove default margins */
   display: flex; /* Use Flexbox for easy centering */
   justify-content: center; /* Horizontally center the header */
@@ -204,7 +205,26 @@ ol {
   float: left;
 }
 
-/* Header and Bio
+/* Header Socials
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+header {
+  position: absolute; /* Makes the header float over the content */
+  right: 0; /* Aligns the header to the right edge of the page */
+  top: 0; /* Aligns the header to the top of the page */
+  padding: 10px;
+  z-index: 1000; /* Ensures the header stays on top of other elements */
+}
+
+header .social-links {
+  display: flex;
+}
+
+header .social-links a {
+  margin-left: 0px; /* Space between social icons */
+}
+
+/* Name and Bio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .profile-container {
@@ -221,10 +241,11 @@ ol {
   padding: 0;
   display: flex;
   align-items: center; /* Aligns the picture and name vertically */
+  flex-direction: column;
 }
 
 .avatar {
-  max-width: 40%;
+  max-width: 60%;
   height: auto;
   object-fit: contain;
   background-position: center;
@@ -233,6 +254,7 @@ ol {
 }
 
 .header {
+  color:#ffffff;
   text-align: center;
   line-height: 100px; /* Vertically center text */
   max-width: 100%;
@@ -245,11 +267,12 @@ ol {
 }
 
 .bio {
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 10px;
   text-align: left;
   line-height: 1.6;
   font-size: 1em;
+  color: #ffffff;
   width: 100%; /* Ensures the bio takes up the full width of its container */
 }
 
@@ -259,6 +282,15 @@ ol {
     padding: 0;
     flex-direction: column;
     align-items: center;
+  }
+
+  .avatar {
+    max-width: 50%;
+    height: auto;
+    object-fit: contain;
+    background-position: center;
+    border-radius: 20%;
+    margin-right: 5%; /* Space between the picture and the header */
   }
 
   .bio {
@@ -322,6 +354,28 @@ ol {
   .project1-description {
       width: 100%;
   }
+}
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.social-links {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between icons */
+}
+
+.social-links a {
+  color: #ffffff; /* Icon color */
+  font-size: 32px; /* Icon size */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #2457F5; /* Change color on hover */
 }
 
 /* MISC

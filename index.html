@@ -90,6 +90,20 @@
 
 <body>
 
+  <header>
+    <div class="social-links">
+      <a href="https://github.com/eric-orellana" target="_blank" rel="noopener">
+        <img src="images/icons/github.svg" alt="github Icon" width="24" height="24">
+      </a>
+      <a href="https://www.linkedin.com/in/orellanaeric/" target="_blank" rel="noopener">
+        <img src="images/icons/linkedin.svg" alt="linkedin Icon" width="24" height="24">
+      </a>
+      <a href="https://www.youtube.com/@ericorellana42/featured" target="_blank" rel="noopener">
+        <img src="images/icons/youtube.svg" alt="YouTube Icon" width="24" height="24">
+      </a>
+    </div>
+  </header>
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
@@ -120,11 +134,13 @@
 
         <div class="project1-section" style="margin-top: 50px;">
           <div class="project1-container">
-              <img src="images/websnap.jpg" class="project1-image" alt="Image of this website">
-              <div class="project1-description">
-                  <h2>This Website</h2>
-                  <p id="WebBio">Loading WebBio...</p>
-              </div>
+            <a href="https://github.com/eric-orellana/EricOrellana-PersonalWebsite" target="_blank">
+              <img src="images/websnap.jpg" class="project1-image" alt="Image of this website" aref="https://github.com/eric-orellana/EricOrellana-PersonalWebsite">
+            </a>
+            <div class="project1-description">
+              <h2>This Website</h2>
+              <p id="WebBio">Loading WebBio...</p>
+            </div>
           </div>
         </div>
 
@@ -132,7 +148,9 @@
           fetch('texts/webBio.txt')
               .then(response => response.text())
               .then(data => {
-                  document.getElementById('WebBio').innerHTML = data.replace(/\n/g, '<br>'); // Replace newlines with <br>
+                  // Replace the word "GitHub" with a clickable link
+                  const linkedText = data.replace('GitHub', '<a href="https://github.com/eric-orellana/EricOrellana-PersonalWebsite" target="_blank">GitHub</a>');
+                  document.getElementById('WebBio').innerHTML = linkedText.replace(/\n/g, '<br>');
               })
               .catch(error => {
                   console.error('Error fetching bio:', error);
@@ -141,13 +159,18 @@
         </script>
 
         <br>
-        <!-- 
-            Footer:
-            This includes a link to privacy.html page which can be setup for your Privacy Policy.
-            This also includes a link to the LittleLink repository to make forking LittleLink easier.
-            You can edit or remove anything here to make your own footer.
-        <p><a href="privacy.html">Privacy Policy</a> | Build your own by forking <a href="https://littlelink.io" target="_blank" rel="noopener" role="button">LittleLink</a>.</p>
-        -->
+        <div class="social-links">
+          <a href="https://github.com/eric-orellana" target="_blank" rel="noopener">
+            <img src="images/icons/github.svg" alt="github Icon" width="24" height="24">
+          </a>
+          <a href="https://www.linkedin.com/in/orellanaeric/" target="_blank" rel="noopener">
+            <img src="images/icons/linkedin.svg" alt="linkedin Icon" width="24" height="24">
+          </a>
+          <a href="https://www.youtube.com/@ericorellana42/featured" target="_blank" rel="noopener">
+            <img src="images/icons/youtube.svg" alt="YouTube Icon" width="24" height="24">
+          </a>
+        </div>
+        <br>
       </div>
     </div>
   </div>
