@@ -94,9 +94,11 @@ body, html {
   display: flex; /* Use Flexbox for easy centering */
   justify-content: center; /* Horizontally center the header */
   font-size: 100%;
+  background-color: rgb(20, 20, 20);
   color-scheme: light dark;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
   sans-serif;
+  color:#ffffff;
 }
 
 /* Typography
@@ -137,7 +139,7 @@ a:focus {
 }         
 
 /* Link Color Dark Theme */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   a {
     color: #4899F7;
 }
@@ -148,7 +150,7 @@ a:focus {
   outline: #7AB8FF solid 2px;
   border-radius: 2px;
 }
-}
+} */
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -157,7 +159,7 @@ code {
   margin: 0 0.2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #f1f1f1;
+  background: #ffffff;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
 }
