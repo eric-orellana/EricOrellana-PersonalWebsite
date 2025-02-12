@@ -98,6 +98,9 @@
       <a href="https://www.linkedin.com/in/orellanaeric/" target="_blank" rel="noopener">
         <img src="images/icons/linkedin.svg" alt="linkedin Icon" width="24" height="24">
       </a>
+      <a href="https://buymeacoffee.com/ericorellana42" target="_blank" rel="noopener">
+        <img src="/images/bmc-logo.png" alt="Tips Link" width="24" height="24">
+      </a>
     </div>
   </header>
 
@@ -131,6 +134,31 @@
 
         <div class="project1-section" style="margin-top: 50px;">
           <div class="project1-container">
+            <a href="https://budgetingbitesforyou.com" target="_blank">
+              <img src="images/budgetingbitespic.jpg" class="project1-image" alt="Image of this website" aref="https://budgetingbitesforyou.com">
+            </a>
+            <div class="project1-description">
+              <h2>Budgeting Bites</h2>
+              <p id="BiteBio">
+                I made a web application called Budgeting Bites. It uses AI to capture a person's meal and outputs the 
+                nutritional value of that meal. Originally, I wanted to use the FDA's public database on foods. However, I 
+                found that the database was a bit inconsistent and that the was much faster to use the AI's database on foods.  
+                <br><br>
+                This was a great lesson on more advanced front end development as well as using 
+                an AI API. I created this because I wanted to track calories in as little effort as possible. I can simply state 
+                what I had to eat and got my calories counted. You can also save items for later and sum up all items in the save section.
+                This data is stored in the browser and accessed later when you return to the site to repopulate the save section.
+                <br><br>
+                Check out
+                <a href="https://budgetingbitesforyou.com" target="_blank" >budgetingbitesforyou.com</a>
+                and let me know what you think!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project1-section" style="margin-top: 50px;">
+          <div class="project1-container">
             <a href="https://github.com/eric-orellana/EricOrellana-PersonalWebsite" target="_blank">
               <img src="images/websnap.jpg" class="project1-image" alt="Image of this website" aref="https://github.com/eric-orellana/EricOrellana-PersonalWebsite">
             </a>
@@ -150,8 +178,8 @@
                   document.getElementById('WebBio').innerHTML = linkedText.replace(/\n/g, '<br>');
               })
               .catch(error => {
-                  console.error('Error fetching bio:', error);
-                  document.getElementById('bio').textContent = 'Failed to load bio.';
+                  console.error('Error fetching WebBio:', error);
+                  document.getElementById('WebBio').textContent = 'Failed to load web project 1.';
               });
         </script>
 
@@ -162,6 +190,9 @@
           </a>
           <a href="https://www.linkedin.com/in/orellanaeric/" target="_blank" rel="noopener">
             <img src="images/icons/linkedin.svg" alt="linkedin Icon" width="24" height="24">
+          </a>
+          <a href="https://buymeacoffee.com/ericorellana42" target="_blank" rel="noopener">
+            <img src="images/bmc-logo.png" alt="Tips Link" width="24" height="24">
           </a>
         </div>
         <br>
