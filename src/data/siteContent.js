@@ -100,21 +100,18 @@ export const miscItems = [
   {
     id: 'project-writeups',
     title: 'Long-Form Project Writeups',
-    status: 'Planning',
     description:
       'Drafting deeper breakdown pages for each project with architecture, tradeoffs, and lessons learned.'
   },
   {
     id: 'new-tools',
     title: 'Tooling Experiments',
-    status: 'In Progress',
     description:
       'Testing additional UI patterns and project templates to speed up future builds while keeping design quality high.'
   },
   {
     id: 'content-pipeline',
     title: 'Content Workflow',
-    status: 'Idea',
     description:
       'Exploring a simpler process for publishing quick thoughts and small updates directly to this site.'
   }

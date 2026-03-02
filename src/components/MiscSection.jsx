@@ -7,7 +7,7 @@ function MiscSection({ title, items }) {
           <article key={item.id} className="misc-card">
             <div className="misc-header">
               <h3>{item.title}</h3>
-              <span className="status-chip">{item.status}</span>
+              {/* <span className="status-chip">{item.status}</span> */}
             </div>
             <p>{item.description}</p>
             {item.link ? (
