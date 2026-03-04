@@ -12,7 +12,7 @@ function App() {
       <main className="main-content">
         
         <ProfileSection profile={profile} />
-        <ProjectSection title="Projects" projects={projects} />
+        <ProjectSection title="What I'm Building & Doing" projects={projects} />
         <MiscSection title="Miscellaneous / In Progress" items={miscItems} />
         <SocialLinks links={socialLinks} location="footer" />
       </main>
