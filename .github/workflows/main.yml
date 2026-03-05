@@ -1,0 +1,21 @@
+name: Deploy to Staging
+
+permissions:
+  contents: write
+
+on:
+  # push:
+  #   branches:
+  #     - Sandbox
+  workflow_dispatch:
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Get the Sandbox branch in a subfolder
+      - name: Checkout Sandbox
+        uses: actions/checkout@v3
+        with:
+          ref: Sandbox
+          path: sandbox
