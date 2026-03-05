@@ -10,17 +10,30 @@
   --accent: #2457f5;
   --border: #2d2d2d;
   /* Background controls: edit these to move/zoom the background image */
-  --site-bg-image: url('../images/20. February-3.webp');
+  --site-bg-image: url('../images/20.\ February-3.webp');
   --site-bg-position-x: 50%;
   --site-bg-position-y: 40%;
   --site-bg-size: cover;
+
+  /* Mobile */
+  --site-mobile-bg-position-x: 50%;
+  --site-mobile-bg-position-y: 40%;
+  --site-mobile-bg-size: cover;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+
 body {
+  overflow-x: hidden;
   margin: 0;
   background-image: linear-gradient(rgba(10, 14, 32, 0), rgba(7, 10, 24, 0)), var(--site-bg-image);
   background-size: var(--site-bg-size);
@@ -31,8 +44,23 @@ body {
   color: var(--text);
 }
 
+@media (max-width: 860px) {
+  .site-shell {
+    min-height: auto;
+    max-height: 100%;
+  }
+
+  body {
+    background-size: var(--site-mobile-bg-size);
+    background-position: var(--site-mobile-bg-position-x) var(--site-mobile-bg-position-y);
+    background-repeat: repeat;
+    background-attachment: scroll;
+  }
+}
+
 .site-shell {
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .main-content {
@@ -215,6 +243,10 @@ a:hover {
 }
 
 @media (max-width: 860px) {
+  .site-shell {
+    min-height: auto;
+  }
+
   .profile-section {
     width: 100%;
   }
@@ -237,8 +269,20 @@ a:hover {
 
   .main-content {
     padding-top: 1.5rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .social-links.footer {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
   }
 }
+
+
+
+
+
+
 
 
 
