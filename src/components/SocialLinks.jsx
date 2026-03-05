@@ -14,7 +14,7 @@ function SocialLinks({ links, location = 'footer' }) {
           aria-label={link.name}
           title={link.name}
         >
-          <img src={link.icon} alt="" />
+          <img className={`social-link-icon${link.name === 'Buy Me a Coffee' ? ' social-link-icon-bmc' : ''}`} src={link.icon} alt="" />
         </a>
       ))}
     </nav>
@@ -22,3 +22,4 @@ function SocialLinks({ links, location = 'footer' }) {
 }
 
 export default SocialLinks;
+
