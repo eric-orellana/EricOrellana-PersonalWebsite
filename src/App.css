@@ -9,7 +9,11 @@
   --muted: #dedede;
   --accent: #2457f5;
   --border: #2d2d2d;
-  --site-bg-image: url('../images/spacedust.webp');
+  /* Background controls: edit these to move/zoom the background image */
+  --site-bg-image: url('../images/20. February-3.webp');
+  --site-bg-position-x: 50%;
+  --site-bg-position-y: 40%;
+  --site-bg-size: cover;
 }
 
 * {
@@ -18,9 +22,9 @@
 
 body {
   margin: 0;
-  background-image: linear-gradient(rgba(10, 14, 32, 0.616), rgba(7, 10, 24, 0.493)), var(--site-bg-image);
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(rgba(10, 14, 32, 0), rgba(7, 10, 24, 0)), var(--site-bg-image);
+  background-size: var(--site-bg-size);
+  background-position: var(--site-bg-position-x) var(--site-bg-position-y);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--bg);
@@ -235,6 +239,7 @@ a:hover {
     padding-top: 1.5rem;
   }
 }
+
 
 
 
