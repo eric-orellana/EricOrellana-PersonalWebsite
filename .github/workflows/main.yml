@@ -1,21 +1,59 @@
-name: Deploy to Staging
+name: Build Sandbox and Update Main
 
 permissions:
   contents: write
 
 on:
-  # push:
-  #   branches:
-  #     - Sandbox
   workflow_dispatch:
-  
+
 jobs:
-  deploy:
+  build-and-sync-main:
     runs-on: ubuntu-latest
+
     steps:
-      # 1. Get the Sandbox branch in a subfolder
-      - name: Checkout Sandbox
-        uses: actions/checkout@v3
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+          fetch-depth: 0
+
+      - name: Checkout Sandbox branch
+        uses: actions/checkout@v4
         with:
           ref: Sandbox
           path: sandbox
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: sandbox/package-lock.json
+
+      - name: Install dependencies
+        working-directory: sandbox
+        run: npm ci
+
+      - name: Build project
+        working-directory: sandbox
+        run: npm run build
+
+      - name: Copy build output into main
+        run: |
+          rm -rf main/assets
+          cp -R sandbox/dist/* main/
+
+      - name: Commit and push to main
+        working-directory: main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: update build output from Sandbox"
+          git push origin HEAD:main
