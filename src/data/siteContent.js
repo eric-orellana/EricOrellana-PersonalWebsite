@@ -14,7 +14,7 @@ export const profile = {
   bioParagraphs: [
     'Hi! My name is Eric Orellana. Welcome and thank you for checking out my website!',
     'I have always been described as curious. This website is where I investigate and share my creations and activities. I enjoy learning new topics, building things, solving problems with others, and overcoming challenges.',
-    'Take a look at what I’m up to below, and feel free to email me at ericorellana42@gmail.com'
+    'Take a look at what I’m up to below, and feel free to email me at ericorellana42@gmail.com.'
   ]
 };
 
