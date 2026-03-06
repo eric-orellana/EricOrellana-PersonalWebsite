@@ -42,8 +42,8 @@
   --site-mobile-bg-overlay-top: rgba(8, 10, 24, 0.35);
   --site-mobile-bg-overlay-bottom: rgba(5, 8, 18, 0.68);
   --site-mobile-bg-effects-opacity: 0.92;
-  --site-mobile-bg-effects-blur: 1px;
-  --site-mobile-bg-effects-brightness: 0.75;
+  --site-mobile-bg-effects-blur: 0px;
+  --site-mobile-bg-effects-brightness: 1.25;
   --site-mobile-bg-effects-contrast: 1.08;
   --site-mobile-bg-effects-saturate: 0.95;
   --site-mobile-bg-effects-hue-rotate: 0deg;
