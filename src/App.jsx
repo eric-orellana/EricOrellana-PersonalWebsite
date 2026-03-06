@@ -13,7 +13,7 @@ function App() {
         
         <ProfileSection profile={profile} />
         <ProjectSection title="What I'm Building & Doing" projects={projects} />
-        <MiscSection title="Miscellaneous / In Progress" items={miscItems} />
+        <MiscSection title="Experiments & Side Projects" items={miscItems} />
         <SocialLinks links={socialLinks} location="footer" />
       </main>
     </div>

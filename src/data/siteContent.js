@@ -120,5 +120,11 @@ export const miscItems = [
     title: 'Lifetime Spotify Data Review',
     description:
       'I’ve used Spotify since 2015, and I recently requested my full Spotify data export. I’m exploring the dataset and writing small Python scripts to parse it for interesting insights about my listening habits. There’s a lot more I want to analyze, and I’m treating it as a lightweight data project.'
-  }
+  },
+  {
+    id: 'PiHole',
+    title: 'PiHole',
+    description:
+      'I set up Pi-hole on my home network to limit my niece and nephew’s Roblox screen time, and I’m now expanding it into a dynamic, network-wide ad blocker with automated blocklist updates. Along the way, I’ve learned a lot about network administration, and next I want to add a VPN for remote access.'
+  },
 ];
